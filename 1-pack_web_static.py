@@ -6,6 +6,7 @@ from fabric.api import local
 
 
 def do_pack():
+    """ Creates an archive """
     now = datetime.now()
     tar_name = "versions/web_static_{}{}{}{}{}{}.tgz".format(
                 now.year,

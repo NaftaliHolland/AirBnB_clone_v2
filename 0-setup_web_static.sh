@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Sets up a web server for deployment
 
 sudo apt-get update;

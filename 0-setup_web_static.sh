@@ -10,13 +10,8 @@ ln_name="/data/web_static/current"
 sudo mkdir -p /data/web_static/releases/test/;
 echo "Test static deployment">/data/web_static/releases/test/index.html;
 
-# remove simlink if it exists
-if [ -L "$ln_name" ]; then
-	rm "$ln_name"
-fi
 # create simlink
-
-ln -s "$target_dir" "$ln_name"
+ln -sf "$target_dir" "$ln_name"
 
 sudo chown -hR ubuntu:ubuntu /data/
 

@@ -7,11 +7,11 @@ sudo apt-get install -y nginx;
 target_dir="/data/web_static/releases/test/"
 ln_name="/data/web_static/current"
 
-sudo mkdir -p /data/web_static/releases/test/;
+sudo mkdir -p /data/web_static/releases/test/ /data/web_static/shared;
 echo "Test static deployment">/data/web_static/releases/test/index.html;
 
 # create simlink
-ln -sf "$target_dir" "$ln_name"
+sudo ln -sf "$target_dir" "$ln_name"
 
 sudo chown -hR ubuntu:ubuntu /data/
 

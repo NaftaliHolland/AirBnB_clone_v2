@@ -18,7 +18,7 @@ fi
 
 ln -s "$target_dir" "$ln_name"
 
-sudo chown -R ubuntu:ubuntu /data/
+sudo chown -hR ubuntu:ubuntu /data/
 
 config="server {
 	listen 80 default_server;
